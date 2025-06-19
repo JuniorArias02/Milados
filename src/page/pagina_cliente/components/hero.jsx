@@ -19,7 +19,7 @@ export function Hero() {
           Helados que <span className="text-[#5D9CEC]">derriten</span> el corazón
         </h1>
         <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-          Descubre los sabores artesanales de Milados. ¡Hechos con amor y ingredientes naturales!
+          La felicidad tiene forma de cono... y sabe a Milados. 🍦💛
         </p>
         <motion.button
           whileHover={{ scale: 1.05, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)" }}
