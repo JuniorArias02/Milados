@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Milados Heladería</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #333;
+        background-color: #fff9f9; /* Fondo rosado claro */
+      }
+      h1 {
+        color: #ff6b6b; /* Rosa principal */
+        text-align: center;
+      }
+      h2 {
+        color: #5d9cec; /* Azul */
+        border-bottom: 2px dashed #ff6b6b;
+        padding-bottom: 5px;
+      }
+      h3 {
+        color: #e67e22; /* Naranja */
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        border: 1px solid #f5d6d6; /* Borde rosado claro */
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #ffebee; /* Rosa muy claro */
+        color: #d32f2f; /* Rojo oscuro */
+      }
+      .price {
+        font-weight: bold;
+        color: #e67e22; /* Naranja */
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      ul li {
+        background-color: #f9f9f9;
+        margin: 5px 0;
+        padding: 8px;
+        border-left: 4px solid #5d9cec; /* Azul */
+      }
+      .sabor-oreo {
+        background-color: #f3e5f5;
+      } /* Morado claro */
+      .sabor-chocolate {
+        background-color: #efebe9;
+      } /* Marrón claro */
+      .horario-promo {
+        font-weight: bold;
+        color: #ff6b6b;
+        animation: blink 1.5s infinite;
+      }
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🍦 Menú de Milados Heladería</h1>
+
+    <h2>📍 Ubicación</h2>
+    <p>
+      <strong>Calle 9 con Avenida 16 esquina</strong><br />
+      📱 Red social:
+      <a href="https://www.instagram.com/milados.heladeria" target="_blank"
+        >@milados.heladeria</a
+      >
+    </p>
+
+    <!-- Nueva sección: Sabores -->
+    <h2>🟣 Sabores</h2>
+    <ul>
+      <li class="sabor-oreo">Oreo</li>
+      <li class="sabor-chocolate">Brownie</li>
+      <li class="sabor-chocolate">Chocolate</li>
+      <li>Arcoíris</li>
+      <li>Frutos rojos</li>
+      <li>Masmelo chicle</li>
+      <li>Vainilla fresa</li>
+      <li>Vainilla chips</li>
+      <li>Tiramisú</li>
+      <li>Ventiado de mora</li>
+    </ul>
+
+    <!-- Nueva sección: Toppings -->
+    <h2>🟡 Toppings</h2>
+    <ul>
+      <li>Moritas</li>
+      <li>Almendras</li>
+      <li>Maní</li>
+      <li>Masmelo</li>
+      <li>Chips de colores</li>
+      <li>M&M (mym)</li>
+      <li>Gusanitos</li>
+      <li>Pepitas de colores</li>
+      <li>Coco</li>
+      <li>Lluvia de chocolate</li>
+      <li>Oreo</li>
+      <li>Explosiones de chicle</li>
+    </ul>
+
+    <!-- Nueva sección: Salsas -->
+    <h2>🟠 Salsas</h2>
+    <ul>
+      <li>Arequipe</li>
+      <li>Leche condensada</li>
+      <li>Chocolate</li>
+      <li>Fresa</li>
+      <li>Chicle</li>
+    </ul>
+
+    <
+    <h2>🍦 Helados en Cono</h2>
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>Cono Sencillo</td>
+        <td class="price">$4.000</td>
+        <td>1 sabor de helado + 1 salsa.</td>
+      </tr>
+      <tr>
+        <td>Cono Doble</td>
+        <td class="price">$6.000</td>
+        <td>2 sabores de helado + 1 salsa.</td>
+      </tr>
+      <tr>
+        <td>Cono Relleno</td>
+        <td class="price">$6.000</td>
+        <td>1 sabor de helado relleno de 1 salsa + 1 topping.</td>
+      </tr>
+      <tr>
+        <td>Cono Especial</td>
+        <td class="price">$11.000</td>
+        <td>2 bolas de helado + 2 toppings + 1 salsa + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Super Cono</td>
+        <td class="price">$9.000</td>
+        <td>3 sabores de helado + 1 salsa.</td>
+      </tr>
+      <tr>
+        <td>Banana Split</td>
+        <td class="price">$12.000</td>
+        <td>3 sabores de helado + 1 salsa + 1 topping + banano + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Copa Tropical</td>
+        <td class="price">$10.000</td>
+        <td>2 sabores de helado + 1 fruta + 1 topping + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Brownie con Helado</td>
+        <td class="price" class="price">$10.000</td>
+        <td>
+          1 sabor de helado + 1 brownie + 1 salsa + 1 topping + chantilly.
+        </td>
+      </tr>
+      <tr>
+        <td>Helado de la Casa</td>
+        <td class="price">$22.000</td>
+        <td>
+          4 sabores de helado + banano + brownie + fresa + durazno + 1 topping +
+          barquillo + 1 salsa.
+        </td>
+      </tr>
+    </table>
+
+    <h2>🧺 Canastas</h2>
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>Mini Canasta</td>
+        <td class="price">$6.000</td>
+        <td>1 sabor de helado + 1 topping + 1 salsa + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Canasta Sencilla</td>
+        <td class="price">$10.500</td>
+        <td>3 sabores de helado + 1 salsa + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Canasta Especial</td>
+        <td class="price">$12.000</td>
+        <td>3 sabores de helado + 2 toppings + 1 salsa.</td>
+      </tr>
+    </table>
+
+    <h2>🥤 Vasos</h2>
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>Mini Vaso</td>
+        <td class="price">$4.000</td>
+        <td>1 sabor de helado + 1 salsa.</td>
+      </tr>
+      <tr>
+        <td>Vaso Sencillo</td>
+        <td class="price">$6.000</td>
+        <td>1 sabor de helado + 1 topping + 1 salsa + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Vaso Doble</td>
+        <td class="price">$8.500</td>
+        <td>2 sabores de helado + 2 toppings + 1 salsa.</td>
+      </tr>
+      <tr>
+        <td>Parfait</td>
+        <td class="price">$11.000</td>
+        <td>
+          2 sabores de helado + chantilly + 1 cereal + 3 toppings + 1 salsa.
+        </td>
+      </tr>
+      <tr>
+        <td>Parfait de Yogurt Griego</td>
+        <td class="price">$11.000</td>
+        <td>
+          1 sabor de helado + yogurt griego + 1 cereal + 2 toppings + 1 salsa.
+        </td>
+      </tr>
+    </table>
+
+    <h2>🧇 Waffles</h2>
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>Waffle Frutos Rojos</td>
+        <td class="price">$15.500</td>
+        <td>Salsa de mora + fresa + 1 sabor de helado + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Waffle Primavera</td>
+        <td class="price">$15.500</td>
+        <td>Banana + fresa + arequipe + 1 sabor de helado + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Waffle Chocolate</td>
+        <td class="price">$15.500</td>
+        <td>Nutella + brownie + 1 sabor de helado + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Waffle Tropical</td>
+        <td class="price">$16.500</td>
+        <td>3 sabores de fruta + 1 salsa + 1 sabor de helado + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Waffle a Tu Gusto</td>
+        <td class="price">$17.500</td>
+        <td>4 toppings + 1 salsa + 1 sabor de helado + chantilly.</td>
+      </tr>
+    </table>
+
+    <h3>Adicionales</h3>
+    <ul>
+      <li>🍒 Topping extra: <span class="price">$1.000</span></li>
+      <li>🍌 Fruta extra: <span class="price">$1.500</span></li>
+    </ul>
+
+    <h2>🥗 Ensaladas de Frutas</h2>
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>Ensalada de Frutas Sencilla</td>
+        <td class="price">11.000</td>
+        <td>1 sabor de helado + frutas + queso + chantilly.</td>
+      </tr>
+      <tr>
+        <td>Ensalada de Frutas Grande</td>
+        <td class="price">$14.000</td>
+        <td>3 sabores de helado + frutas + queso + chantilly.</td>
+      </tr>
+    </table>
+
+    <!-- Nueva sección: Horarios -->
+    <h2>🕒 Horarios</h2>
+    <ul>
+      <li><strong>Lunes a domingo</strong>: 4:00 p.m. a 10:00 p.m.</li>
+      <li><strong>Lunes festivos</strong>: 4:00 p.m. a 10:00 p.m.</li>
+      <li class="horario-promo"><strong>Miércoles</strong>: 🥳 ¡Promo 2x1!</li>
+    </ul>
+
+    <!-- Nueva sección: Colores de la Web -->
+    <h2>🎨 Colores de la Web</h2>
+    <div style="display: flex; gap: 10px; margin-bottom: 20px">
+      <div
+        style="
+          width: 50px;
+          height: 50px;
+          background-color: #ff6b6b;
+          border-radius: 5px;
+        "
+      ></div>
+      <div
+        style="
+          width: 50px;
+          height: 50px;
+          background-color: #5d9cec;
+          border-radius: 5px;
+        "
+      ></div>
+      <div
+        style="
+          width: 50px;
+          height: 50px;
+          background-color: #fff9e6;
+          border-radius: 5px;
+          border: 1px solid #ddd;
+        "
+      ></div>
+    </div>
+    <p>Rosa (#ff6b6b) | Azul (#5d9cec) | Crema (#fff9e6)</p>
+
+    <!-- Adicionales -->
+    <h3>Adicionales</h3>
+    <ul>
+      <li>🍒 Topping extra: <span class="price">$1.000</span></li>
+      <li>🍌 Fruta extra: <span class="price">$1.500</span></li>
+    </ul>
+  </body>
+</html>
