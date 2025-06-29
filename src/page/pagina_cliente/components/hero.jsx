@@ -110,7 +110,7 @@ export function Hero() {
               className="relative bg-[#FF73D9] text-white font-bold py-4 px-12 rounded-full transition-all duration-300 text-lg quicksand-semibold overflow-hidden flex items-center justify-center gap-2"
             >
               <MapPin className="w-5 h-5" />
-              <span className="relative z-10">Nuestras Tiendas</span>
+              <span className="relative z-10">Ubicacion</span>
               <motion.span
                 className="absolute bottom-0 left-0 w-full h-0 bg-[#83CCDA] opacity-30"
                 animate={{
