@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/bubblegum-sans": "^5.2.6",
+    "@fontsource/pacifico": "^5.2.6",
+    "@fontsource/quicksand": "^5.2.8",
     "@tailwindcss/vite": "^4.1.10",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.517.0",

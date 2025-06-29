@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram } from "lucide-react"; // Instala: npm install lucide-react
+import { Instagram } from "lucide-react";
 
 export default function Navbar() {
 	return (
@@ -12,23 +12,23 @@ export default function Navbar() {
 			<div className="container mx-auto px-6 py-3 flex justify-between items-center">
 				{/* Logo */}
 				<motion.div whileHover={{ scale: 1.05 }}>
-					<h1 className="text-3xl font-bold text-[#FF6B6B]">Milados</h1>
+					<h1 className="text-3xl font-bold text-[#FF73D9] quicksand-semibold">Milados</h1>
 				</motion.div>
 
 				{/* Menú */}
 				<div className="hidden md:flex space-x-8">
-					<a href="#" className="text-[#5D9CEC] hover:text-[#FF6B6B] transition-colors font-medium">Inicio</a>
-					<a href="#" className="text-[#5D9CEC] hover:text-[#FF6B6B] transition-colors font-medium">Sabores</a>
-					<a href="#" className="text-[#5D9CEC] hover:text-[#FF6B6B] transition-colors font-medium">Horario</a>
-					<a href="#" className="text-[#5D9CEC] hover:text-[#FF6B6B] transition-colors font-medium">Contacto</a>
+					<a href="#" className="text-[#83CCDA] hover:text-[#FF73D9] transition-colors quicksand-semibold">Inicio</a>
+					<a href="#" className="text-[#83CCDA] hover:text-[#FF73D9] transition-colors quicksand-semibold">Sabores</a>
+					<a href="#" className="text-[#83CCDA] hover:text-[#FF73D9] transition-colors quicksand-semibold">Horario</a>
+					<a href="#" className="text-[#83CCDA] hover:text-[#FF73D9] transition-colors quicksand-semibold">Contacto</a>
 				</div>
 
 				{/* Instagram + Botón */}
 				<motion.a
-					href="https://instagram.com/milados"
+					href="https://www.instagram.com/milados_heladeria"
 					target="_blank"
 					whileHover={{ scale: 1.1 }}
-					className="flex items-center space-x-2 bg-[#FF6B6B] px-4 py-2 rounded-full text-white"
+					className="flex items-center space-x-2 bg-[#FF73D9] px-4 py-2 rounded-full text-white quicksand-semibold"
 				>
 					<Instagram size={18} />
 					<span className="hidden sm:inline-block">Síguenos</span>
@@ -36,4 +36,4 @@ export default function Navbar() {
 			</div>
 		</motion.nav>
 	);
-};
+}

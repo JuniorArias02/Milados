@@ -7,9 +7,8 @@ export default function Inicio() {
     <div className="overflow-hidden">
       {/* Sección Hero */}
       <Hero />
-
       {/* Sección Horario */}
-      <HorarioSection />
+      {/* <HorarioSection /> */}
     </div>
   );
 }

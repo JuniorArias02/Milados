@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+/* === Importar fuentes === */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&family=Bubblegum+Sans&display=swap');
+
+/* === Clases para Bubblegum Sans (Divertida) === */
+.bubblegum-regular {
+  font-family: 'Bubblegum Sans', cursive;
+  font-weight: 400; /* Normal */
+}
+.bubblegum-bold {
+  font-family: 'Bubblegum Sans', cursive;
+  font-weight: 700; /* Más grueso (si la fuente lo soporta) */
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1); /* Efecto cartoon */
+}
+
+/* === Clases para Pacifico (Cursiva elegante) === */
+.pacifico-regular {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+}
+
+/* === Clases para Quicksand (Legible) === */
+.quicksand-regular {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+.quicksand-semibold {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
