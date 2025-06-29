@@ -1,4 +1,4 @@
-const productosCono = [
+export const productosCono = [
 	{
 		id: 1,
 		nombre: "Cono Sencillo",
@@ -8,6 +8,7 @@ const productosCono = [
 		numToppings: 0,
 		crema: false,
 		extras: [],
+		imagen: "",
 	},
 	{
 		id: 2,
@@ -18,6 +19,7 @@ const productosCono = [
 		numToppings: 0,
 		crema: false,
 		extras: [],
+		imagen: "",
 	},
 	{
 		id: 3,
@@ -28,6 +30,7 @@ const productosCono = [
 		numToppings: 1,
 		crema: false,
 		extras: [],
+		imagen: "",
 	},
 	{
 		id: 4,
@@ -38,6 +41,7 @@ const productosCono = [
 		numToppings: 2,
 		crema: true,
 		extras: [],
+		imagen: "",
 	},
 	{
 		id: 5,
@@ -48,6 +52,7 @@ const productosCono = [
 		numToppings: 0,
 		crema: false,
 		extras: [],
+		imagen: "",
 	},
 	{
 		id: 6,
@@ -58,6 +63,7 @@ const productosCono = [
 		numToppings: 1,
 		crema: true,
 		extras: ["banano"],
+		imagen: "",
 	},
 	{
 		id: 7,
@@ -68,6 +74,7 @@ const productosCono = [
 		numToppings: 1,
 		crema: true,
 		extras: ["fruta"],
+		imagen: "",
 	},
 	{
 		id: 8,
@@ -78,6 +85,7 @@ const productosCono = [
 		numToppings: 1,
 		crema: true,
 		extras: ["brownie"],
+		imagen: "",
 	},
 	{
 		id: 9,
@@ -88,11 +96,12 @@ const productosCono = [
 		numToppings: 1,
 		crema: false,
 		extras: ["banano", "brownie", "fresa", "durazno", "barquillo"],
+		imagen: "",
 	}
 ];
 
 
-const productosCanasta = [
+export const productosCanasta = [
 	{
 		id: 1,
 		nombre: "Mini Canasta",
@@ -102,6 +111,7 @@ const productosCanasta = [
 		numToppings: 1,
 		crema: true,
 		extras: [],
+		imagen:"",
 	},
 	{
 		id: 2,
@@ -112,6 +122,7 @@ const productosCanasta = [
 		numToppings: 0,
 		crema: true,
 		extras: [],
+		imagen:"",
 	},
 	{
 		id: 3,
@@ -122,11 +133,12 @@ const productosCanasta = [
 		numToppings: 2,
 		crema: false,
 		extras: [],
+		imagen:"",
 	}
 ];
 
 
-const productosVasos = [
+export const productosVasos = [
 	{
 		id: 1,
 		nombre: "Mini Vaso",
@@ -136,6 +148,7 @@ const productosVasos = [
 		numToppings: 0,
 		crema: false,
 		extras: [],
+		imagen:"",
 	},
 	{
 		id: 2,
@@ -146,6 +159,7 @@ const productosVasos = [
 		numToppings: 1,
 		crema: true,
 		extras: [],
+		imagen:"",
 	},
 	{
 		id: 3,
@@ -156,6 +170,7 @@ const productosVasos = [
 		numToppings: 2,
 		crema: false,
 		extras: [],
+		imagen:"",
 	},
 	{
 		id: 4,
@@ -166,6 +181,7 @@ const productosVasos = [
 		numToppings: 3,
 		crema: true,
 		extras: ["cereal"],
+		imagen:"",
 	},
 	{
 		id: 5,
@@ -176,10 +192,11 @@ const productosVasos = [
 		numToppings: 2,
 		crema: false,
 		extras: ["cereal", "yogurt griego"],
+		imagen:"",
 	}
 ];
 
-const productosWaffles = [
+export const productosWaffles = [
 	{
 		id: 1,
 		nombre: "Waffle Frutos Rojos",
@@ -190,6 +207,7 @@ const productosWaffles = [
 		crema: true,
 		extras: [],
 		frutas: ["mora", "fresa"],
+		imagen:"",
 	},
 	{
 		id: 2,
@@ -201,6 +219,7 @@ const productosWaffles = [
 		crema: true,
 		extras: ["arequipe"],
 		frutas: ["banana", "fresa"],
+		imagen:"",
 	},
 	{
 		id: 3,
@@ -212,6 +231,7 @@ const productosWaffles = [
 		crema: true,
 		extras: ["nutella", "brownie"],
 		frutas: [],
+		imagen:"",
 	},
 	{
 		id: 4,
@@ -223,6 +243,7 @@ const productosWaffles = [
 		crema: true,
 		extras: [],
 		frutas: ["frutas mixtas"],
+		imagen:"",
 	},
 	{
 		id: 5,
@@ -234,11 +255,12 @@ const productosWaffles = [
 		crema: true,
 		extras: [],
 		frutas: [],
+		imagen:"",
 	}
 ];
 
 
-const productosEnsaladas = [
+export const productosEnsaladas = [
 	{
 		id: 1,
 		nombre: "Ensalada de Frutas Sencilla",
@@ -248,6 +270,7 @@ const productosEnsaladas = [
 		numToppings: 0,
 		crema: true,
 		extras: ["frutas", "queso"],
+		imagen:"",
 	},
 	{
 		id: 2,
@@ -258,9 +281,10 @@ const productosEnsaladas = [
 		numToppings: 0,
 		crema: true,
 		extras: ["frutas", "queso"],
+		imagen:"",
 	}
 ];
-const sabores = [
+export const sabores = [
 	{ id: 1, nombre: "Oreo" },
 	{ id: 2, nombre: "Brownie" },
 	{ id: 3, nombre: "Chocolate" },
@@ -273,7 +297,7 @@ const sabores = [
 	{ id: 10, nombre: "Ventiado de mora" }
 ];
 
-const toppings = [
+export const toppings = [
 	{ id: 1, nombre: "Moritas" },
 	{ id: 2, nombre: "Almendras" },
 	{ id: 3, nombre: "Maní" },
@@ -288,7 +312,7 @@ const toppings = [
 	{ id: 12, nombre: "Explosiones de chicle" }
 ];
 
-const salsas = [
+export const salsas = [
 	{ id: 1, nombre: "Arequipe" },
 	{ id: 2, nombre: "Leche condensada" },
 	{ id: 3, nombre: "Chocolate" },
@@ -296,7 +320,7 @@ const salsas = [
 	{ id: 5, nombre: "Chicle" }
 ];
 
-const horario = [
+export const horario = [
 	{ id: 1, dia: "Lunes", apertura: "4:00 PM", cierre: "10:00 PM", promo: false },
 	{ id: 2, dia: "Martes", apertura: "4:00 PM", cierre: "10:00 PM", promo: false },
 	{ id: 3, dia: "Miércoles", apertura: "4:00 PM", cierre: "10:00 PM", promo: "2x1" },
@@ -305,4 +329,12 @@ const horario = [
 	{ id: 6, dia: "Sábado", apertura: "4:00 PM", cierre: "10:00 PM", promo: false },
 	{ id: 7, dia: "Domingo", apertura: "4:00 PM", cierre: "10:00 PM", promo: false },
 	{ id: 8, dia: "Lunes Festivo", apertura: "4:00 PM", cierre: "10:00 PM", promo: false }
+];
+
+export const categorias = [
+	{ nombre: "Conos", productos: productosCono },
+	{ nombre: "Canastas", productos: productosCanasta },
+	{ nombre: "Vasos", productos: productosVasos },
+	{ nombre: "Waffles", productos: productosWaffles },
+	{ nombre: "Ensaladas", productos: productosEnsaladas },
 ];

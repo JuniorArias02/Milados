@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { RUTAS } from "../../../router/route";
 
 export function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative h-screen flex items-center justify-center bg-[#DFE1DC] overflow-hidden">
       {/* Fondo con textura sutil */}
@@ -40,7 +44,7 @@ export function Hero() {
           >
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
               <span className="bubblegum-bold text-[#FF73D9] block">Sabores que</span>
-              <motion.span 
+              <motion.span
                 className="pacifico-regular text-[#83CCDA] block"
                 animate={{
                   textShadow: [
@@ -76,6 +80,7 @@ export function Hero() {
           >
             {/* Botón "Ver Sabores" */}
             <motion.button
+              onClick={() => navigate(RUTAS.VER_HELADOS.VER_CONOS)}
               whileHover={{
                 scale: 1.05,
                 backgroundColor: "#FF73D9",
