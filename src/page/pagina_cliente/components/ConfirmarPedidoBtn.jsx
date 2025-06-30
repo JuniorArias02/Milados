@@ -39,7 +39,7 @@ export default function ConfirmarPedidoBtn() {
 
   const enviarPorWhatsApp = () => {
     const mensaje = generarTextoPedido();
-    const url = `https://wa.me/573143087315?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/573204601286?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
   };
 
