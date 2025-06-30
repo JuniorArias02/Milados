@@ -8,7 +8,7 @@ export const productosCono = [
 		numToppings: 0,
 		crema: false,
 		extras: [],
-		imagen: "/public/helados/cono.webp",
+		imagen: "/helados/cono.webp",
 	},
 	{
 		id: 2,
@@ -181,7 +181,7 @@ export const productosVasos = [
 		numToppings: 3,
 		crema: true,
 		extras: ["cereal"],
-		imagen:"/public/helados/parfait.webp",
+		imagen:"/helados/parfait.webp",
 	},
 	{
 		id: 5,
