@@ -9,9 +9,10 @@ export function VerHelados() {
 					<h2 className="text-5xl pacifico-regular text-[#FF73D9] mb-4">Nuestra Selección Premium</h2>
 					<div className="w-24 h-1 bg-[#83CCDA] mx-auto mb-4"></div>
 					<p className="text-xl quicksand-regular text-gray-600 max-w-2xl mx-auto">
-						Helados artesanales con los mejores ingredientes
+						Conos, waffles y ensaladas de frutas con el toque único de Milados 🍦🍓🧇
 					</p>
 				</div>
+
 
 				{/* Grid de productos con altura automática */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
