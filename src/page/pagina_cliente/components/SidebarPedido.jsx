@@ -1,8 +1,43 @@
 import { usePedido } from "../../../store/PedidoContext";
 import ConfirmarPedidoBtn from "./ConfirmarPedidoBtn.jsx";
+import Swal from "sweetalert2";
 
 export default function SidebarPedido({ abierto, onClose }) {
   const { pedido, eliminarItem, generarMensaje } = usePedido();
+
+  const handleEliminar = (idx) => {
+    eliminarItem(idx);
+
+    Swal.fire({
+      title: '<div class="pacifico-regular text-3xl text-[#ff6b6b]">¡Helado Eliminado!</div>',
+      html: `
+      <div class="flex flex-col items-center justify-center">
+        <svg class="w-16 h-16 mx-auto mb-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 15H17V19C17 20.1046 16.1046 21 15 21H9C7.89543 21 7 20.1046 7 19V15Z" fill="#ff6b6b" opacity="0.3"/>
+          <path d="M17 15V12M7 15V12" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 6C9.79086 6 8 7.79086 8 10V12H16V10C16 7.79086 14.2091 6 12 6Z" fill="#ff6b6b" opacity="0.3"/>
+          <path d="M9 5V3M15 5V3" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round"/>
+          <path d="M18 6L6 18M6 6L18 18" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round" class="animate-ping"/>
+        </svg>
+        <p class="quicksand-semibold text-[#5D9CEC] text-lg">Helado eliminado</p>
+      </div>
+    `,
+      timer: 2000,
+      timerProgressBar: true,
+      background: '#FFF9E6',
+      showConfirmButton: false,
+      position: 'center',
+      customClass: {
+        popup: 'shadow-lg border-2 border-[#ff6b6b]/30 rounded-2xl',
+        timerProgressBar: 'bg-[#ff6b6b]'
+      },
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      }
+    });
+  };
+
 
   return (
     <div className={`fixed top-0 right-0 w-full sm:w-96 h-full bg-white shadow-2xl transition-all duration-300 z-50 ${abierto ? "translate-x-0" : "translate-x-full"}`}>
@@ -71,9 +106,12 @@ export default function SidebarPedido({ abierto, onClose }) {
                     </p>
                   </div>
                   <button
-                    onClick={() => eliminarItem(idx)}
-                    className="text-white bg-[#ff6b6b] hover:bg-[#e55a5a] px-3 py-1 rounded-full text-sm transition-colors"
+                    onClick={() => handleEliminar(idx)}
+                    className="text-white bg-[#ff6b6b] hover:bg-[#e55a5a] px-3 py-1 rounded-full text-sm transition-colors flex items-center"
                   >
+                    <svg className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 7L18.1327 19.1425C18.0579 20.1891 17.187 21 16.1378 21H7.86224C6.81296 21 5.94208 20.1891 5.86732 19.1425L5 7M10 11V17M14 11V17M15 7V4C15 3.44772 14.5523 3 14 3H10C9.44772 3 9 3.44772 9 4V7M4 7H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                     Eliminar
                   </button>
                 </div>

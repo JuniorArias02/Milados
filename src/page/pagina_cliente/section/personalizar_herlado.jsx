@@ -2,6 +2,7 @@ import { useState } from "react";
 import { preparacion } from "../../../backend/json";
 import { useLocation, useNavigate } from "react-router-dom";
 import { usePedido } from "../../../store/PedidoContext";
+import Swal from 'sweetalert2'
 
 export default function PersonalizarHelado() {
   const navigate = useNavigate();
@@ -47,7 +48,73 @@ export default function PersonalizarHelado() {
     };
 
     agregarItem(nuevoHelado);
-    alert("🍦 Helado agregado al carrito");
+    Swal.fire({
+      title: '<div class="pacifico-regular text-3xl text-[#FF73D9]">¡Delicioso!</div>',
+      html: `
+    <div class="flex flex-col items-center justify-center">
+      <svg class="w-16 h-16 mx-auto mb-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 15H17V19C17 20.1046 16.1046 21 15 21H9C7.89543 21 7 20.1046 7 19V15Z" fill="#FF73D9"/>
+        <path d="M17 15V12M7 15V12" stroke="#5D9CEC" stroke-width="2" stroke-linecap="round"/>
+        <path d="M12 6C9.79086 6 8 7.79086 8 10V12H16V10C16 7.79086 14.2091 6 12 6Z" fill="#5D9CEC"/>
+        <path d="M9 5V3M15 5V3" stroke="#FF73D9" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <p class="quicksand-semibold text-[#5D9CEC] text-lg">Helado agregado al carrito</p>
+    </div>
+  `,
+      timer: 2000,
+      timerProgressBar: true,
+      background: '#FFF9E6',
+      showConfirmButton: false,
+      position: 'center', // Cambiado a centro
+      customClass: {
+        popup: 'shadow-lg border-2 border-[#FF73D9]/30 rounded-2xl',
+        timerProgressBar: 'bg-[#FF73D9]'
+      },
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      }
+    });
+  };
+
+  const handlePedirAhora = () => {
+    const nuevoHelado = {
+      nombre: helado.nombre,
+      precio: helado.precio,
+      sabores: seleccion.sabores,
+      salsas: seleccion.salsas,
+      toppings: seleccion.toppings,
+    };
+
+    agregarItem(nuevoHelado);
+
+    let mensaje = `🍦 *¡Hola! Quiero hacer un pedido de helados:*\n\n`;
+
+    mensaje += `*1.* ${nuevoHelado.nombre}\n`;
+
+    if (nuevoHelado.sabores.length)
+      mensaje += `   - Sabores: ${nuevoHelado.sabores.map((s) => s.nombre).join(", ")}\n`;
+
+    if (nuevoHelado.salsas.length)
+      mensaje += `   - Salsas: ${nuevoHelado.salsas.map((s) => s.nombre).join(", ")}\n`;
+
+    if (nuevoHelado.toppings.length)
+      mensaje += `   - Toppings: ${nuevoHelado.toppings.map((t) => t.nombre).join(", ")}\n`;
+
+    mensaje += `   💰 Precio: ${nuevoHelado.precio.toLocaleString("es-CO", {
+      style: "currency",
+      currency: "COP",
+      minimumFractionDigits: 0,
+    })}\n\n`;
+
+    mensaje += `🧾 *Total:* ${nuevoHelado.precio.toLocaleString("es-CO", {
+      style: "currency",
+      currency: "COP",
+      minimumFractionDigits: 0,
+    })}`;
+
+    const url = `https://wa.me/573143087315?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
   };
 
   return (
@@ -150,7 +217,10 @@ export default function PersonalizarHelado() {
               </button>
 
 
-              <button className="px-6 py-3 rounded-xl bg-[#ff6b6b] text-white hover:bg-[#e55a5a] quicksand-semibold transition-colors flex items-center justify-center gap-2">
+              <button
+                onClick={handlePedirAhora}
+                className="px-6 py-3 rounded-xl bg-[#ff6b6b] text-white hover:bg-[#e55a5a] quicksand-semibold transition-colors flex items-center justify-center gap-2"
+              >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
                 </svg>
