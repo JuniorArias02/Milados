@@ -30,3 +30,13 @@
   font-weight: 600;
 }
 
+@media (max-width: 400px) {
+  .horario-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .horario-horas {
+    margin-top: 8px;
+    margin-left: 40px; /* para alinear con el icono */
+  }
+}
