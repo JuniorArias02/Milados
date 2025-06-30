@@ -192,7 +192,7 @@ export const productosVasos = [
 		numToppings: 2,
 		crema: false,
 		extras: ["cereal", "yogurt griego"],
-		imagen:"",
+		imagen:"/helados/parfaitYogur.webp",
 	}
 ];
 
@@ -270,7 +270,7 @@ export const productosEnsaladas = [
 		numToppings: 0,
 		crema: true,
 		extras: ["frutas", "queso"],
-		imagen:"",
+		imagen:"/helados/ensaladaFrutas.webp",
 	},
 	{
 		id: 2,
