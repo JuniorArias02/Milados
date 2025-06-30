@@ -4,10 +4,11 @@ import Inicio from './page/pagina_cliente/page/inicio';
 import { VerHelados } from './page/pagina_cliente/page/ver_helados';
 import PersonalizarHelado from './page/pagina_cliente/section/personalizar_herlado';
 import { RUTAS } from './router/route';
-
+import ScrollToTop from './page/pagina_cliente/components/ScrollToTop';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* Ruta padre que usa Layout */}
         <Route path={RUTAS.INICIO} element={<Layout />}>
