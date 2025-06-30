@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Layout from './page/pagina_cliente/layout/layout';
 import Inicio from './page/pagina_cliente/page/inicio';
 import { VerHelados } from './page/pagina_cliente/page/ver_helados';
+import HorariosVista from './page/pagina_cliente/page/Horario';
 import PersonalizarHelado from './page/pagina_cliente/section/personalizar_herlado';
 import { RUTAS } from './router/route';
 import ScrollToTop from './page/pagina_cliente/components/ScrollToTop';
@@ -23,6 +24,10 @@ function App() {
           <Route index element={<PersonalizarHelado />} />
         </Route>
 
+        <Route path={RUTAS.HORARIOS} element={<Layout />}>
+          <Route index element={<HorariosVista />} />
+        </Route>
+        
         {/* Ruta comodín para redirigir si no existe */}
         <Route path="*" element={<Navigate to={RUTAS.INICIO} replace />} />
       </Routes>
