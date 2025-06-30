@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { preparacion } from "../../../backend/json";
 import { useLocation, useNavigate } from "react-router-dom";
+import { usePedido } from "../../../store/PedidoContext";
 
 export default function PersonalizarHelado() {
   const navigate = useNavigate();
   const { state } = useLocation();
   const helado = state?.producto;
+  const { agregarItem } = usePedido();
 
   const [seleccion, setSeleccion] = useState({
     sabores: [],
@@ -32,6 +34,20 @@ export default function PersonalizarHelado() {
         }));
       }
     }
+  };
+
+  const handleGuardar = () => {
+    const nuevoHelado = {
+      nombre: helado.nombre,
+      precio: helado.precio,
+      imagen: helado.imagen,
+      sabores: seleccion.sabores,
+      salsas: seleccion.salsas,
+      toppings: seleccion.toppings,
+    };
+
+    agregarItem(nuevoHelado);
+    alert("🍦 Helado agregado al carrito");
   };
 
   return (
@@ -98,8 +114,8 @@ export default function PersonalizarHelado() {
                       key={item.id}
                       onClick={() => handleSeleccion(tipo, item)}
                       className={`px-4 py-2 rounded-full border-2 transition-all quicksand-regular ${estaSeleccionado
-                          ? "bg-[#ff6b6b] text-white border-[#ff6b6b] shadow-md"
-                          : "bg-white text-[#5d9cec] border-[#5d9cec] hover:bg-[#5d9cec] hover:text-white"
+                        ? "bg-[#ff6b6b] text-white border-[#ff6b6b] shadow-md"
+                        : "bg-white text-[#5d9cec] border-[#5d9cec] hover:bg-[#5d9cec] hover:text-white"
                         }`}
                     >
                       {item.nombre}
@@ -125,12 +141,14 @@ export default function PersonalizarHelado() {
             </button>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-6 py-3 rounded-xl bg-[#5d9cec] text-white hover:bg-[#4a8adc] quicksand-semibold transition-colors flex items-center justify-center gap-2">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
+              <button
+                onClick={handleGuardar}
+                className="px-6 py-3 rounded-xl bg-[#5d9cec] text-white hover:bg-[#4a8adc] quicksand-semibold transition-colors flex items-center justify-center gap-2"
+              >
+                <svg className="w-5 h-5">...</svg>
                 Guardar
               </button>
+
 
               <button className="px-6 py-3 rounded-xl bg-[#ff6b6b] text-white hover:bg-[#e55a5a] quicksand-semibold transition-colors flex items-center justify-center gap-2">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,6 +160,6 @@ export default function PersonalizarHelado() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
