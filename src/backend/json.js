@@ -41,7 +41,7 @@ export const productosCono = [
 		numToppings: 2,
 		crema: true,
 		extras: [],
-		imagen: "",
+		imagen: "/helados/conoespecial.jpeg",
 	},
 	{
 		id: 5,
@@ -96,7 +96,7 @@ export const productosCono = [
 		numToppings: 1,
 		crema: false,
 		extras: ["banano", "brownie", "fresa", "durazno", "barquillo"],
-		imagen: "",
+		imagen: "/helados/delaCasa.jpeg",
 	}
 ];
 
@@ -219,7 +219,7 @@ export const productosWaffles = [
 		crema: true,
 		extras: ["arequipe"],
 		frutas: ["banana", "fresa"],
-		imagen:"",
+		imagen:"/helados/wafletPrimavera.jpeg",
 	},
 	{
 		id: 3,
@@ -231,7 +231,7 @@ export const productosWaffles = [
 		crema: true,
 		extras: ["nutella", "brownie"],
 		frutas: [],
-		imagen:"",
+		imagen:"/helados/wafletChocolate.jpeg",
 	},
 	{
 		id: 4,
@@ -281,7 +281,7 @@ export const productosEnsaladas = [
 		numToppings: 0,
 		crema: true,
 		extras: ["frutas", "queso"],
-		imagen:"",
+		imagen:"/helados/ensaladaGrande.jpeg",
 	}
 ];
 export const sabores = [
