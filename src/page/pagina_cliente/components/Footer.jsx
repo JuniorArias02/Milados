@@ -45,9 +45,15 @@ export default function Footer() {
 					<div className="flex flex-col sm:flex-row items-center gap-6">
 						<div className="flex items-center gap-2">
 							<Phone className="w-5 h-5 text-[#FF73D9]" />
-							<span className="quicksand-semibold">+57 300 123 4567</span>
+							<a
+								href="https://wa.me/573143087315"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="quicksand-semibold text-[#5D9CEC] hover:underline"
+							>
+								+57 314 308 7315
+							</a>
 						</div>
-
 						<div className="flex items-center gap-2">
 							<MapPin className="w-5 h-5 text-[#FF73D9]" />
 							<span className="quicksand-semibold">Cúcuta, Colombia</span>
