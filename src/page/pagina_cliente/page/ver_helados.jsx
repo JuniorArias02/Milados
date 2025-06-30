@@ -35,7 +35,14 @@ export function VerHelados() {
 										</div>
 									)}
 									<div className="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full shadow-sm">
-										<span className="quicksand-semibold text-[#5D9CEC]">${p.precio.toLocaleString()}</span>
+										<span className="quicksand-semibold text-[#5D9CEC]">
+											{p.precio.toLocaleString('es-CO', {
+												style: 'currency',
+												currency: 'COP',
+												minimumFractionDigits: 0
+											})}
+										</span>
+
 									</div>
 								</div>
 

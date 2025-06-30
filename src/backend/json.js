@@ -170,7 +170,7 @@ export const productosVasos = [
 		numToppings: 2,
 		crema: false,
 		extras: [],
-		imagen:"",
+		imagen:"/helados/vasoDoble.png",
 	},
 	{
 		id: 4,
