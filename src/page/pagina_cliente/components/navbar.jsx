@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
+import { RUTAS } from "../../../router/route";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
 	return (
@@ -12,13 +14,16 @@ export default function Navbar() {
 			<div className="container mx-auto px-6 py-3 flex justify-between items-center">
 				{/* Logo */}
 				<motion.div whileHover={{ scale: 1.05 }}>
-					<h1 className="text-3xl font-bold text-[#FF73D9] quicksand-semibold">Milados</h1>
+					<Link to={RUTAS.INICIO}>
+						<h1 className="text-3xl font-bold text-[#FF73D9] quicksand-semibold">Milados</h1>
+					</Link>
 				</motion.div>
+
 
 				{/* Menú */}
 				<div className="hidden md:flex space-x-8">
-					<a href="#" className="text-[#83CCDA] hover:text-[#FF73D9] transition-colors quicksand-semibold">Inicio</a>
-					<a href="#" className="text-[#83CCDA] hover:text-[#FF73D9] transition-colors quicksand-semibold">Sabores</a>
+					<Link to={RUTAS.INICIO} className="text-[#83CCDA] hover:text-[#FF73D9] transition-colors quicksand-semibold">Inicio</Link>
+					<Link to={RUTAS.VER_HELADOS.VER_CONOS} className="text-[#83CCDA] hover:text-[#FF73D9] transition-colors quicksand-semibold">Helados</Link>
 					<a href="#" className="text-[#83CCDA] hover:text-[#FF73D9] transition-colors quicksand-semibold">Horario</a>
 					<a href="#" className="text-[#83CCDA] hover:text-[#FF73D9] transition-colors quicksand-semibold">Contacto</a>
 				</div>
