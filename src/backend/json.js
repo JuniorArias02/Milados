@@ -338,3 +338,9 @@ export const categorias = [
 	{ nombre: "Waffles", productos: productosWaffles },
 	{ nombre: "Ensaladas", productos: productosEnsaladas },
 ];
+
+export const preparacion = [
+	{ nombre: "sabores", productos: sabores },
+	{ nombre: "salsas", productos: salsas },
+	{ nombre: "toppings", productos: toppings },
+];

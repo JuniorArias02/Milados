@@ -1,6 +1,8 @@
 import { categorias } from "../../../backend/json";
-
+import { useNavigate } from "react-router-dom";
+import { RUTAS } from "../../../router/route";
 export function VerHelados() {
+	const navigate = useNavigate();
 	return (
 		<section className="min-h-screen bg-[#fff9e6] px-4 py-12 mt-8">
 			<div className="max-w-7xl mx-auto">
@@ -125,15 +127,26 @@ export function VerHelados() {
 									)}
 
 									{/* Botón de acción */}
-									<button className="w-full py-3 rounded-lg quicksand-semibold text-white bg-[#FF73D9] hover:bg-[#e65ac4] transition-colors flex items-center justify-center mt-auto cursor-pointer">										<svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<button
+										onClick={() =>
+											navigate(
+												RUTAS.VER_HELADOS.PERSONALIZAR.replace(":id", p.id),
+												{ state: { producto: p } }
+											)
+										}
+										className="w-full py-3 rounded-lg quicksand-semibold text-white bg-[#FF73D9] hover:bg-[#e65ac4] transition-colors flex items-center justify-center mt-auto cursor-pointer"
+									>
+										<svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
 										</svg>
 										Personalizar este helado
 									</button>
+
 								</div>
 							</div>
 						))
-					)};				</div>
+					)};
+				</div>
 
 				{/* Pie de sección */}
 				<div className="text-center mt-16">

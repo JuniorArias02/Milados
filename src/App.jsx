@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Layout from './page/pagina_cliente/layout/layout';
 import Inicio from './page/pagina_cliente/page/inicio';
 import { VerHelados } from './page/pagina_cliente/page/ver_helados';
+import PersonalizarHelado from './page/pagina_cliente/section/personalizar_herlado';
 import { RUTAS } from './router/route';
 
 function App() {
@@ -15,6 +16,10 @@ function App() {
 
         <Route path={RUTAS.VER_HELADOS.VER_CONOS} element={<Layout />}>
           <Route index element={<VerHelados />} />
+        </Route>
+
+        <Route path={RUTAS.VER_HELADOS.PERSONALIZAR} element={<Layout />}>
+          <Route index element={<PersonalizarHelado />} />
         </Route>
 
         {/* Ruta comodín para redirigir si no existe */}
