@@ -33,7 +33,7 @@ export default function Navbar({ abrirSidebar }) {
             className="md:ml-0 mx-auto md:mx-0"
           >
             <Link to={RUTAS.INICIO}>
-              <h1 className="text-3xl font-bold text-[#FF73D9] quicksand-semibold">Milados</h1>
+              <h1 className="text-3xl font-bold text-[#FF73D9] bubblegum-bold">Milados</h1>
             </Link>
           </motion.div>
 

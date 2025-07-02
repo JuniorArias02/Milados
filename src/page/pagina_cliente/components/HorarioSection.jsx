@@ -11,7 +11,7 @@ export function HorarioSection() {
 	];
 
 	return (
-		<section className="py-20 bg-gradient-to-b from-[#FFF9E6] to-[#5D9CEC]/10">
+		<section className="py-20 bg-gradient-to-b from-[#FFF9E6] to-[#5D9CEC]/10 ">
 			<div className="container mx-auto px-6">
 				<h2 className="text-4xl font-bold text-center text-[#FF6B6B] mb-12">Horario y Promociones</h2>
 
