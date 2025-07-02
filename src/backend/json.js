@@ -85,7 +85,7 @@ export const productosCono = [
 		numToppings: 1,
 		crema: true,
 		extras: ["brownie"],
-		imagen: "",
+		imagen: "/helados/BrownieConHelado.jpeg",
 	},
 	{
 		id: 9,
@@ -133,7 +133,7 @@ export const productosCanasta = [
 		numToppings: 2,
 		crema: false,
 		extras: [],
-		imagen:"",
+		imagen:"/helados/canastaEspecial.jpeg",
 	}
 ];
 
