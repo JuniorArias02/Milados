@@ -111,7 +111,7 @@ export const productosCanasta = [
 		numToppings: 1,
 		crema: true,
 		extras: [],
-		imagen:"",
+		imagen:"/helados/miniCanasta.jpeg",
 	},
 	{
 		id: 2,
